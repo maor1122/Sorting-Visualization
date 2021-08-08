@@ -11,3 +11,5 @@ import insertionSort from "./Algorithms/insertionSort.js";
 import mergeSort from "./Algorithms/mergeSort.js";
 import quickSort from "./Algorithms/quickSort.js";
 import selectionSort from "./Algorithms/selectionSort.js";
+//Nodes.js.
+import * from "Nodes.js"
