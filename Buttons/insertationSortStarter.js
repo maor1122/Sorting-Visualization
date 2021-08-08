@@ -1,4 +1,4 @@
-async function insertionSortStarter(){
+export async function insertionSortStarter(){
     if(sorting||sorted)
         return;
     sorting=true;
