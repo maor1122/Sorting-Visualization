@@ -5,7 +5,7 @@ function importJS(link){
 }
 //buttons
 importJS("./buttons/bubbleSortStarter.js");
-importJS("./buttons/insetionSortStarter.js");
+importJS("./buttons/insertionSortStarter.js");
 importJS("./buttons/mergeSortStarter.js");
 importJS("./buttons/selectionSortStarter.js");
 importJS("./buttons/quickSortStarter.js");
