@@ -1,4 +1,4 @@
-export async function selectionSort(size,graph,textElement,colors){
+async function selectionSort(size,graph,textElement,colors){
     let low=0,curr,min;
     while(low<size){
         min=low;
