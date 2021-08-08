@@ -14,7 +14,7 @@ else it switches the numbers positions, that way after a complete iteration the 
 is locked at the last place (the highest). Then it repeats for the rest of the unsorted array.
 
 **Mergesort**  
-Average time complexity is O(nlog(n)).  
+Average time complexity is O(n log n).  
 Mergesort relies on the fact that sorting two sorted sub-arrays is easier then sorting the full unsorted array.
 First it divides the array into half then repeats until we are left with one (sorted) number array.
 Then it merges the two divided sorted arrays back, and repeats until the end.
