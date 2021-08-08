@@ -1,4 +1,4 @@
-export async function bubbleSortStarter(){
+async function bubbleSortStarter(){
     if(sorting||sorted)
         return;
     sorting=true;
