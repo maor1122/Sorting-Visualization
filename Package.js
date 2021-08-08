@@ -16,3 +16,4 @@ importJS("./algorithms/insertionSort.js");
 importJS("./algorithms/mergeSort.js");
 importJS("./algorithms/quickSort.js");
 importJS("./algorithms/selectionSort.js");
+importJS("Nodes.js");
