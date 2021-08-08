@@ -10,6 +10,9 @@ importJS("./buttons/mergeSortStarter.js");
 importJS("./buttons/selectionSortStarter.js");
 importJS("./buttons/quickSortStarter.js");
 importJS("./buttons/remakeArray.js");
+//sliders
+importJS("./buttons/sliders/speedSlider.js");
+importJS("./buttons/sliders/arraySizeSlider.js");
 //algorithms.
 importJS("./algorithms/bubbleSort.js");
 importJS("./algorithms/insertionSort.js");
