@@ -1,12 +1,18 @@
-//buttons.
-import bubbleSortStarter from "./buttons/bubbleSortStarter.js";
-import mergeSortStarter from "./buttons/mergeSortStarter.js";
-import selectionSortStarter from "./buttons/selectionSortStarter.js";
-import quickSortStarter from "./buttons/quickSortStarter.js";
-import remakeArray from "./buttons/remakeArray.js";
+function importJS(link){
+  var imported = document.createElement('script');
+  imported.src = link;
+  document.head.appendChild(imported);
+}
+//buttons
+importJS("./buttons/bubbleSortStarter.js");
+importJS("./buttons/insetionSortStarter.js");
+importJS("./buttons/mergeSortStarter.js");
+importJS("./buttons/selectionSortStarter.js");
+importJS("./buttons/quickSortStarter.js");
+importJS("./buttons/remakeArray.js");
 //algorithms.
-import bubbleSort from "./algorithms/bubbleSort.js";
-import insertionSort from "./algorithms/insertionSort.js";
-import mergeSort from "./algorithms/mergeSort.js";
-import quickSort from "./algorithms/quickSort.js";
-import selectionSort from "./algorithms/selectionSort.js";
+importJS("./algorithms/bubbleSort.js");
+importJS("./algorithms/insertionSort.js");
+importJS("./algorithms/mergeSort.js");
+importJS("./algorithms/quickSort.js");
+importJS("./algorithms/selectionSort.js");
