@@ -75,26 +75,6 @@
         }
         //end of function
 
-        //sliders
-        const arraySizeSlider = document.getElementById("arraySize");
-        arraySizeSlider.value=numbers;
-        const arraySizeOutput=document.getElementById("ArraySizeText");
-        arraySizeOutput.innerHTML=arraySizeSlider.value;
-        arraySizeSlider.value=numbers;
-        arraySizeSlider.oninput = function(){
-            arraySizeOutput.innerHTML=arraySizeSlider.value;
-        }
-        
-        const speedSlider = document.getElementById("Speed");
-        speedSlider.value=1001-time;
-        const speedText=document.getElementById("SpeedText");
-        speedText.innerHTML=speedSlider.value;
-        speedSlider.oninput = function(){
-            time=1001-this.value;
-            speedText.innerHTML=speedSlider.value;
-        }
-        //end of sliders
-
 </script>
 	</body>
 </html>
