@@ -1,4 +1,4 @@
-export async function mergeSortStarter(){
+async function mergeSortStarter(){
     if(!sorting&&!sorted){
         sorting=true;
         await mergeSort(0,numbers-1,graph,textElement,numbers,colors);
