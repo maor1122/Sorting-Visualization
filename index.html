@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sorting Algorithms</title>
+        <style>
+            /*Side menu*/            
+            .menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            }
+
+            .menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            position:sticky;
+            overflow: hidden;
+            white-space: nowrap;
+            }
+
+            .menu a:hover {
+            color: #f1f1f1;
+            cursor: pointer;
+            }
+
+            .menu p {
+            padding: 2px 2px 2px 32px;
+            margin:auto;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            cursor:default;
+            position:sticky;
+            overflow: hidden;
+            white-space: nowrap;
+            }
+            
+            .menu input{
+            margin:30px;
+            transition: 0.3s;
+            white-space:nowrap;
+            -webkit-appearance: none;
+            width: 50%;
+            height: 15px;
+            border-radius: 5px;  
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            }
+            .menu input:hover{
+                opacity: 1;
+            }
+            .menu input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #818181;
+            cursor: pointer;
+            }
+            .menu input::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #818181;
+            cursor: pointer;
+            }
+            
+
+
+            /*End of side menu*/
+        </style>
+
+        <script src="Algorithms.js"></script>
+        <script src="Nodes.js"></script>
+        <script src="Buttons.js"></script>
+
+        <script>
+            function getparameter(parameterName){
+                let parameters=new URLSearchParams(window.location.search);
+                return parameters.get(parameterName);
+            }
+
+        </script>
+
+	</head>
+	<body style="background-color: rgb(211, 211, 211);">
+     <svg id="graph">
+     </svg>
+<div id="sideMenu" class="menu">
+    <div class="StartButtonsContainer">
+        <a onclick = "bubbleSortStarter()">Start BubbleSort </a>
+        <a onclick = "mergeSortStarter()">Start MergeSort</a>
+        <a onclick = "quickSortStarter()">Start QuickSort</a>
+        <a onclick = "selectionSortStarter()">Start SelectionSort</a>
+        <a onclick = "insertionSortStarter()">Start InsertionSort</a>
+        <p>Array Size: <span id="ArraySizeText"></span></p>
+        <input type="range" min="10" max="100" id="arraySize">
+        <p>Speed:<span id="SpeedText"></span></p>
+        <input type="range" min="400" max="1000" id="Speed">
+        <a href="#" onclick = "remakeArray()">Remake Array</a>
+    </div>
+     <div>
+
+    </div>
+    </div>
+
+
+
+     <script>
+        //intialization
+        const sizeX=1000,sizeY=370,posY=330,posX=20,graph=[],nodes=[],svgElement=document.getElementById("graph");
+        let numbers=Math.floor(getparameter("numbers")), valueList=[],time=getparameter("speed"),sorting=false,sorted=false,counter=0;
+        if(numbers==null||numbers<10)
+            numbers=15;
+        if(time==null)
+            time=300;
+        let mode="random";
+        svgElement.setAttribute("width",sizeX+400); 
+        svgElement.setAttribute("height",sizeY*2);
+        const textNodes=[],textElement=[],gElement=[],colors=["black","grey","DarkSlateGrey","RoyalBlue","Maroon","DarkSeaGreen"];
+        if(mode=="random")
+            for(i=0;i<numbers;i++){
+                valueList[i]=Math.floor(Math.random()*1000);
+                nodes[i]={"color":colors[0],"value":valueList[i]}
+                gElement[i]=document.createElementNS("http://www.w3.org/2000/svg","g");
+                graph[i]=createRectengleElement(sizeX/numbers*i,posY-nodes[i].value/Math.max(...valueList)*posY,sizeX/numbers*(4/5),nodes[i].value/Math.max(...valueList)*posY,nodes[i].color);
+                textElement[i]=createTextElement(sizeX/numbers*i+sizeX/numbers*(4/5)/2,posY+25,400/numbers,"middle",textNodes[i]=document.createTextNode(nodes[i].value));
+                if(numbers>40)
+                    textElement[i].style.display="none";
+                gElement[i].appendChild(graph[i]);
+                gElement[i].appendChild(textElement[i]);
+                svgElement.appendChild(gElement[i]);
+            }
+        //end of initialization
+
+        //Delay function
+        function delay(time) {
+            return new Promise(resolve => {
+                setTimeout(() => {
+                resolve(time);
+                }, time);
+            });
+        }
+        //end of function
+
+        //sliders
+        const arraySizeSlider = document.getElementById("arraySize");
+        arraySizeSlider.value=numbers;
+        const arraySizeOutput=document.getElementById("ArraySizeText");
+        arraySizeOutput.innerHTML=arraySizeSlider.value;
+        arraySizeSlider.value=numbers;
+        arraySizeSlider.oninput = function(){
+            arraySizeOutput.innerHTML=arraySizeSlider.value;
+        }
+        
+        const speedSlider = document.getElementById("Speed");
+        speedSlider.value=1001-time;
+        const speedText=document.getElementById("SpeedText");
+        speedText.innerHTML=speedSlider.value;
+        speedSlider.oninput = function(){
+            time=1001-this.value;
+            speedText.innerHTML=speedSlider.value;
+        }
+        //end of sliders
+
+</script>
+	</body>
+</html>
