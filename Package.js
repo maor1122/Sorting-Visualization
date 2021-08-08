@@ -3,8 +3,6 @@ function importJS(link){
   imported.src = link;
   document.head.appendChild(imported);
 }
-//Nodes
-importJS("Nodes.js");
 //buttons
 importJS("./buttons/bubbleSortStarter.js");
 importJS("./buttons/insertionSortStarter.js");
