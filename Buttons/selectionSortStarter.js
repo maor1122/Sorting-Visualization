@@ -1,4 +1,4 @@
-async function selectionSortStarter(){
+export async function selectionSortStarter(){
     if(sorting||sorted)
         return;
     sorting=true;
