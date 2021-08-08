@@ -1,5 +1,5 @@
 function importJS(link){
-  var imported = document.createElement('script');
+  let imported = document.createElement('script');
   imported.src = link;
   document.head.appendChild(imported);
 }
