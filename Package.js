@@ -1,9 +1,9 @@
 //buttons.
-import bubbleSortStarter from "./buttons/bubbleSortStarter.js";
-import mergeSortStarter from "./buttons/mergeSortStarter.js";
-import selectionSortStarter from "./buttons/selectionSortStarter.js";
-import quickSortStarter from "./buttons/quickSortStarter.js";
-import remakeArray from "./buttons/remakeArray.js";
+import bubbleSortStarter from "./Buttons/bubbleSortStarter.js";
+import mergeSortStarter from "./Buttons/mergeSortStarter.js";
+import selectionSortStarter from "./Buttons/selectionSortStarter.js";
+import quickSortStarter from "./Buttons/quickSortStarter.js";
+import remakeArray from "./Buttons/remakeArray.js";
 //algorithms.
 import bubbleSort from "./Algorithms/bubbleSort.js";
 import insertionSort from "./Algorithms/insertionSort.js";
