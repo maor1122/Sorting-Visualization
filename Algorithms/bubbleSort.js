@@ -1,4 +1,4 @@
-async function bubbleSort(graph,textElement,numbers,colors){
+export async function bubbleSort(graph,textElement,numbers,colors){
 
     let curr,i=0;
     for(i=0;i<numbers;i++){
