@@ -2,9 +2,6 @@
 
 Enter the website with the link: https://maor1122.github.io/Sorting-Visualization/.
 
-This is my first project using Javascript CSS and HTML, I made this project while learning about the languages,
-also there's no React or NodeJS in this project since I only learnt about those after the project.
-
 I made a brief explenations on each algorithm:  
 
 **Bubblesort**   
