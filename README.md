@@ -1,7 +1,7 @@
 # Sorting Algorithms Visualization - by Maor Shemesh.
 
 Enter the website with the link: https://maor1122.github.io/Sorting-Visualization/.
-
+<br>
 
 <img src="Gif/Sorting-Visualization Mergesort.gif" width="700" height="400" />
 
