@@ -2,6 +2,9 @@
 
 Enter the website with the link: https://maor1122.github.io/Sorting-Visualization/.
 
+
+<img src="Gif/Sorting-Visualization Mergesort.gif" width="700" height="400" />
+
 I made a brief explenations on each algorithm:  
 
 **Bubblesort**   
