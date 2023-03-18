@@ -2,7 +2,7 @@
 
 Enter the website with the link: https://maor1122.github.io/Sorting-Visualization/.
 <br>
-<h3>I did this project in my first year of the CS degree, without correlation to the degree.<h3/>
+<h3>I did this project in my first year of the CS degree, without correlation to the degree.</h3>
 <img src="Gif/Sorting-Visualization Mergesort.gif" width="700" height="400" />
 
 I made a brief explenations on each algorithm:  
