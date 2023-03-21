@@ -5,4 +5,6 @@ arraySizeOutput.innerHTML=arraySizeSlider.value;
 arraySizeSlider.value=numbers;
 arraySizeSlider.oninput = function(){
     arraySizeOutput.innerHTML=arraySizeSlider.value;
+    newArraySize = this.value;
+    console.log("new array size value: "+newArraySize)
 }

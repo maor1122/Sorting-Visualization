@@ -27,6 +27,7 @@ function createTextElement(x,y,fontSize,position,textNode){
 }
 
 function switchNodesPosition(graph1,graph2,text1,text2){
+    if(sorting!=true) throw err;
     let temp=graph1.getAttribute("x");
     graph1.setAttribute("x",graph2.getAttribute("x"));
     graph2.setAttribute("x",temp);
