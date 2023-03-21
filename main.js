@@ -34,8 +34,15 @@ function RemoveElements(){
 }
 
 function resetColor(){
-    for(i=0;i<numbers;i++)
+    for(i=0;i<numbers;i++){
         graph[i].style.fill = colors[0];
+        if(textElement[i].getAttribute("y")!=posY+25){
+            textElement[i].setAttribute("y",posY+25);
+        }
+        if(graph[i].getAttribute("y")!=posY-valueList[i]/Math.max(...valueList)*posY){
+            graph[i].setAttribute("y",posY-valueList[i]/Math.max(...valueList)*posY);
+        }
+    }
 }
 
 CreateElements();
