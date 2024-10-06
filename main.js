@@ -7,6 +7,7 @@ svgElement.setAttribute("height",sizeY*2);
 
 
 function CreateElements(){
+    svgElement.hidden = true
     numbers = newArraySize;
     if(mode=="random")
         for(i=0;i<numbers;i++)
@@ -22,6 +23,7 @@ function CreateElements(){
             gElement[i].appendChild(textElement[i]);
             svgElement.appendChild(gElement[i]);
         }
+    svgElement.hidden = false
 }
 
 function RemoveElements(){
