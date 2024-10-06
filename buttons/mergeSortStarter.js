@@ -8,5 +8,8 @@ async function mergeSortStarter(){
             sorted=true;
             sorting=false;
         }
-    }catch(ignored){resetColor();}
+    }catch(ignored){}
+    finally{
+        finished=true
+    }
 }

@@ -6,5 +6,8 @@ async function bubbleSortStarter(){
     await bubbleSort(graph,textElement,numbers,colors);
     sorting=false;
     sorted=true;
-    }catch(ignored){resetColor();}
+    }catch(ignored){}
+    finally{
+        finished=true
+    }
 }

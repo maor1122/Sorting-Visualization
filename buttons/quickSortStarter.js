@@ -6,5 +6,8 @@ async function quickSortStarter(){
             sorting=false;
             sorted=true;
         }
-    }catch(ignored){resetColor();}
+    }catch(ignored){}
+    finally{
+        finished=true
+    }
 }

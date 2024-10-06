@@ -1,7 +1,7 @@
-const sizeX=1000,sizeY=370,posY=330,posX=20,graph=[],svgElement=document.getElementById("graph");
-let numbers, valueList=[], time = 300, sorting=false, sorted=false,counter=0;
+const sizeX=1000,sizeY=370,posY=330,posX=20,svgElement=document.getElementById("graph");
+let numbers, valueList=[], time = 300, sorting=false, sorted=false, finished=false,counter=0;
 let mode="random", newArraySize=15;
-const textNodes=[],textElement=[],gElement=[],colors=["black","grey","DarkSlateGrey","RoyalBlue","Maroon","DarkSeaGreen"];
+let textNodes=[],textElement=[],gElement=[],graph=[],colors=["black","grey","DarkSlateGrey","RoyalBlue","Maroon","DarkSeaGreen"];
 svgElement.setAttribute("width",sizeX+400); 
 svgElement.setAttribute("height",sizeY*2);
 
@@ -31,6 +31,10 @@ function RemoveElements(){
         textElement[i].remove();
         gElement[i].remove();
     }
+    textNodes = []
+    graph = []
+    textElement = []
+    gElement = []
 }
 
 function resetColor(){
@@ -56,10 +60,15 @@ function delay(time) {
         }, time);
     });
 }
-function forceDelay(time) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-        resolve(time);
-        }, time);
+function waitForFinished() {
+    return new Promise((resolve) => {
+        const checkFinished = () => {
+            if (finished) {
+                resolve();
+            } else {
+                setTimeout(checkFinished, 50);
+            }
+        };
+        checkFinished();
     });
 }

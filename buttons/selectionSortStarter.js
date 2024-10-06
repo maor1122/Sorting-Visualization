@@ -6,5 +6,8 @@ async function selectionSortStarter(){
         await selectionSort(numbers,graph,textElement,colors);
         sorting=false;
         sorted=true;
-    }catch(ignored){resetColor();}
+    }catch(ignored){}
+    finally{
+        finished=true
+    }
 }
